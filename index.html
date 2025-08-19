@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy Birthday, Jiya ✈️❤️</title>
+  <meta name="description" content="A romantic, heart-touching birthday greeting for Jiya from Viren." />
+  <style>
+    :root{
+      --bg1:#0f172a;      /* slate-900 */
+      --bg2:#1e293b;      /* slate-800 */
+      --accent:#fb7185;   /* rose-400 */
+      --accent-2:#f472b6; /* pink-400 */
+      --gold:#f59e0b;     /* amber-500 */
+      --soft:#e2e8f0;     /* slate-200 */
+      --card:#111827;     /* gray-900 */
+      --text:#f8fafc;     /* slate-50 */
+      --muted:#cbd5e1;    /* slate-300 */
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      color:var(--text);
+      background: radial-gradient(1200px 600px at 10% -10%, #1b2546 0%, transparent 70%),
+                  radial-gradient(1000px 600px at 120% 10%, #1e2550 0%, transparent 70%),
+                  linear-gradient(180deg, var(--bg1), var(--bg2));
+      overflow-x:hidden;
+    }
+
+    /* Subtle stars */
+    .stars{
+      position:fixed; inset:0; pointer-events:none; z-index:0;
+      background-image:
+        radial-gradient(2px 2px at 20% 30%, rgba(255,255,255,.6) 50%, transparent 51%),
+        radial-gradient(1.5px 1.5px at 70% 20%, rgba(255,255,255,.6) 50%, transparent 51%),
+        radial-gradient(1.4px 1.4px at 35% 70%, rgba(255,255,255,.5) 50%, transparent 51%),
+        radial-gradient(1.2px 1.2px at 85% 60%, rgba(255,255,255,.5) 50%, transparent 51%),
+        radial-gradient(1.2px 1.2px at 55% 85%, rgba(255,255,255,.35) 50%, transparent 51%);
+      opacity:.6;
+      animation: twinkle 6s infinite linear;
+    }
+    @keyframes twinkle{ 0%,100%{opacity:.55} 50%{opacity:.8} }
+
+    header{
+      position:relative; z-index:1; padding: 64px 24px 24px; text-align:center;
+    }
+    .badge{display:inline-block; padding:8px 14px; border:1px solid rgba(255,255,255,.15); border-radius:999px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); backdrop-filter: blur(4px);}
+    h1{
+      margin:18px auto 10px; max-width:900px;
+      font-size: clamp(32px, 7vw, 80px);
+      line-height:1.02; letter-spacing:-.02em;
+      background: linear-gradient(90deg, #fff, var(--accent), var(--accent-2));
+      -webkit-background-clip:text; background-clip:text; color:transparent;
+      text-shadow: 0 8px 60px rgba(255, 255, 255, .15);
+    }
+    .subtitle{color:var(--muted); font-size: clamp(16px,2.3vw,22px); max-width:800px; margin:0 auto;}
+
+    /* Floating hearts */
+    .heart-cloud{ position:absolute; inset:0; pointer-events:none; overflow:hidden; z-index:0;}
+    .heart{ position:absolute; width:18px; height:18px; background:linear-gradient(135deg, var(--accent), var(--accent-2)); transform: rotate(45deg);
+      animation: floatUp linear infinite; opacity:.75; filter: drop-shadow(0 4px 10px rgba(255, 105, 135, .35));}
+    .heart::before,.heart::after{content:""; position:absolute; width:18px; height:18px; background:inherit; border-radius:50%;}
+    .heart::before{left:-9px}
+    .heart::after{top:-9px}
+    @keyframes floatUp { 0%{ transform: translateY(0) rotate(45deg); opacity:0 } 10%{opacity:.7} 100%{ transform: translateY(-120vh) rotate(45deg); opacity:0 } }
+
+    /* Airplane path */
+    .sky{ position:relative; z-index:1; margin: 24px auto 10px; max-width:920px; }
+    .path{ stroke: rgba(255,255,255,.45); stroke-width:2; fill:none; stroke-dasharray:5 8; filter: drop-shadow(0 2px 6px rgba(255,255,255,.12)); }
+    .plane{ offset-path: path("M20,200 C150,-80 470,-40 460,180 C450,400 180,330 120,190 C90,120 220,60 330,110 C460,170 520,200 560,160");
+            offset-distance: 0%; animation: fly 10s ease-in-out infinite; }
+    @keyframes fly{ 0%{ offset-distance:0% } 50%{ offset-distance:100% } 100%{ offset-distance:0% } }
+
+    .card{
+      position:relative; z-index:2; background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border: 1px solid rgba(255,255,255,.08); box-shadow: 0 10px 40px rgba(0,0,0,.35);
+      border-radius: 24px; padding: 28px; margin: 28px auto; max-width: 920px; backdrop-filter: blur(6px);
+    }
+    .card h2{ margin:0 0 10px; font-size: clamp(22px,3.2vw,34px) }
+    .card p{ color: var(--soft); font-size: clamp(16px, 2.1vw, 18px); line-height:1.8; }
+
+    .flex{ display:flex; gap:18px; flex-wrap:wrap }
+    .half{ flex:1 1 320px }
+
+    .ticket{
+      border-radius: 20px; border:1px dashed rgba(255,255,255,.25); padding:18px; background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); position:relative; overflow:hidden;
+    }
+    .ticket::before,.ticket::after{content:""; position:absolute; top:50%; width:18px; height:18px; background:var(--bg2); border:1px solid rgba(255,255,255,.12); border-radius:50%; transform:translateY(-50%);} 
+    .ticket::before{ left:-10px } .ticket::after{ right:-10px }
+
+    .list{ list-style:none; padding:0; margin:0 }
+    .list li{ padding:10px 12px; margin:8px 0; border:1px solid rgba(255,255,255,.08); border-radius:14px; background:rgba(255,255,255,.03); }
+
+    .signature{ margin-top:16px; font-family: "Segoe Script", "Brush Script MT", cursive; font-size: 22px; color:#fff; }
+
+    .cta{ display:flex; gap:12px; justify-content:center; margin: 26px 0 6px }
+    button{
+      appearance:none; border:0; cursor:pointer; padding:14px 18px; border-radius:14px; font-weight:700; font-size:15px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2)); color:white; box-shadow:0 10px 30px rgba(255, 29, 120, .35);
+    }
+    button.secondary{ background:transparent; border:1px solid rgba(255,255,255,.15); color:var(--muted) }
+
+    .hidden{ display:none }
+
+    footer{ text-align:center; color:var(--muted); padding:30px 18px 60px }
+
+    /* Poem panel */
+    .poem-panel{ 
+      padding:20px; 
+      text-align:center; 
+      background:rgba(255,255,255,0.05); 
+      border:1px solid rgba(255,255,255,0.15); 
+      border-radius:22px; 
+      box-shadow:0 10px 30px rgba(251,113,133,0.4); 
+    }
+    .poem-panel h3{ color:#fb7185; margin-bottom:12px; }
+    .poem-panel p{ color:#f8fafc; font-size:17px; line-height:1.8; font-style:italic; }
+  </style>
+</head>
+<body>
+  <div class="stars"></div>
+
+  <header>
+    <span class="badge">From Viren, with all my love</span>
+    <h1>Happy Birthday, Jiya — My Sky, My Home, My Forever</h1>
+    <p class="subtitle">To the most wonderful airhostess and the love of my life. No matter how high you fly, my heart will always be your favorite landing.</p>
+  </header>
+
+  <div class="heart-cloud" aria-hidden="true"></div>
+
+  <section class="sky" aria-hidden="true">
+    <svg viewBox="0 0 600 340" width="100%" height="220" role="img" aria-label="Airplane drawing a heart trail">
+      <path class="path" d="M20,200 C150,-80 470,-40 460,180 C450,400 180,330 120,190 C90,120 220,60 330,110 C460,170 520,200 560,160"/>
+    </svg>
+    <div class="plane" style="position:absolute; top:0; left:0; width:0; height:0;">
+      <svg width="40" height="40" viewBox="0 0 24 24" style="transform: translate(-20px, -20px)">
+        <path fill="white" d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9L2 14v2l8-2.5V19l-2 1.5V22l3-1 3 1v-1.5L13 19v-5.5l8 2.5Z"/>
+      </svg>
+    </div>
+  </section>
+
+  <main>
+    <section class="card">
+      <div class="flex">
+        <div class="half">
+          <h2>My Letter to You ✍️</h2>
+          <p>
+            Jiya, every sunrise reminds me of your smile, and every sunset feels like a promise that I’ll love you even more tomorrow. You bring grace to the skies and peace to my world. I can’t imagine a life where your laughter isn’t the soundtrack and your hand isn’t the one I hold.
+          </p>
+          <p>
+            You are my courage when I’m scared, my calm when life feels loud, and my favorite place to come home to—no matter how far the journey. Thank you for choosing me in this lifetime. I choose you in every one.
+          </p>
+          <p class="signature">— Forever yours, Viren</p>
+          <div class="cta">
+            <button id="reveal">Open Your Surprise 💝</button>
+          </div>
+        </div>
+        <div class="half">
+          <div class="poem-panel">
+            <h3>💖 My Poem for You 💖</h3>
+            <p>
+              In the sky full of stars, you are my brightest light,<br/>
+              In the chaos of life, you are my calm and my night.<br/>
+              Every heartbeat whispers your name so true,<br/>
+              Jiya, my love, my forever — I live for you. ✨
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="surprise" class="hidden" style="margin-top:22px">
+        <div class="flex">
+          <div class="half">
+            <div class="ticket">
+              <h3 style="margin:0 0 10px">🎟️ Boarding Pass — Flight: <span style="color:var(--gold)">L❤️VE</span></h3>
+              <div class="flex">
+                <div class="half">
+                  <p style="margin:.2rem 0"><strong>Passenger</strong><br/>Jiya (Queen of My Sky)</p>
+                  <p style="margin:.2rem 0"><strong>From</strong><br/>My Heart</p>
+                  <p style="margin:.2rem 0"><strong>To</strong><br/>Forever & Always</p>
+                </div>
+                <div class="half">
+                  <p style="margin:.2rem 0"><strong>Gate</strong><br/>H-❤️</p>
+                  <p style="margin:.2rem 0"><strong>Seat</strong><br/> 1A (Next to Viren)</p>
+                  <p style="margin:.2rem 0"><strong>Boarding Time</strong><br/> Every moment I see you</p>
+                </div>
+              </div>
+              <p style="margin:.4rem 0; color:var(--muted)">* This ticket never expires.</p>
+            </div>
+          </div>
+          <div class="half">
+            <h3 style="margin:0 0 10px">Reasons I Love You</h3>
+            <ul class="list">
+              <li>Your kindness can turn a rough day into a gentle one.</li>
+              <li>The way you care for people—even at 30,000 feet—teaches me love.</li>
+              <li>Your dreams inspire mine; your courage makes me braver.</li>
+              <li>Your smile? My favorite destination.</li>
+              <li>Because with you, every ordinary moment becomes a memory.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Promises for Our Journey ✨</h2>
+      <ul class="list">
+        <li>I’ll be your safe landing on the stormy days and your loudest cheer on the sunny ones.</li>
+        <li>I’ll show up, every single day, choosing you in the little ways and the big ones.</li>
+        <li>I’ll listen to your stories from the sky and make sure home always feels like peace.</li>
+        <li>I’ll protect our love, grow with you, and build a life we’re proud of.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Our Song in Simple Words 🎶</h2>
+      <p>
+        If love is a journey, then you’re my favorite window seat, the sunrise over the clouds, and the softest landing at night. Happy Birthday, Jiya. May this year bring you everything you deserve—health, joy, and a thousand new reasons to smile. I’m forever grateful that in a world full of strangers, I found you.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    Made with all my heart by Viren • © <span id="year"></span>
+  </footer>
+
+  <script>
+    // Floating heart spawner
+    const cloud = document.querySelector('.heart-cloud');
+    function spawnHeart(){
+      const h = document.createElement('div');
+      h.className = 'heart';
+      h.style.left = Math.random()*100 + 'vw';
+      h.style.bottom = '-20px';
+      const dur = 6 + Math.random()*6; // 6–12s
+      h.style.animationDuration = dur+'s';
+      h.style.opacity = 0.5 + Math.random()*0.5;
+      h.style.transform = 'rotate(45deg) scale(' + (0.6 + Math.random()*1.2) + ')';
+      cloud.appendChild(h);
+      setTimeout(()=>h.remove(), dur*1000);
+    }
+    setInterval(spawnHeart, 450);
+    for(let i=0;i<16;i++) setTimeout(spawnHeart, i*200);
+
+    // Surprise reveal
+    const revealBtn = document.getElementById('reveal');
+    const surprise = document.getElementById('surprise');
+    revealBtn?.addEventListener('click', ()=>{
+      surprise.classList.toggle('hidden');
+      confetti(280);
+    });
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Minimal confetti
+    function confetti(count){
+      const colors = ['#ffffff', '#fde047', '#fb7185', '#f472b6'];
+      for(let i=0;i<count;i++){
+        const p = document.createElement('div');
+        p.style.position='fixed'; p.style.top='-10px'; p.style.left=(Math.random()*100)+'vw';
+        p.style.width='6px'; p.style.height='12px';
+        p.style.background=colors[Math.floor(Math.random()*colors.length)];
+        p.style.opacity = 0.9;
+        p.style.transform = 'rotate('+(Math.random()*360)+'deg)';
+        p.style.borderRadius='2px';
+        p.style.zIndex=9999; p.style.pointerEvents='none';
+        document.body.appendChild(p);
+        const fall = 100 + Math.random()*40; // vh
+        const drift = (Math.random()*2-1)*30; // vw
+        p.animate([
+          { transform: p.style.transform + ' translate(0, 0)', opacity:1 },
+          { transform: p.style.transform + ' translate('+drift+'vw, '+fall+'vh)', opacity:0.8 }
+        ], { duration: 2000 + Math.random()*1500, easing: 'cubic-bezier(.2,.7,.2,1)' })
+        .onfinish = ()=> p.remove();
+      }
+    }
+  </script>
+</body>
+</html>
